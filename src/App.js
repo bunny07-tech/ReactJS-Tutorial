@@ -11,7 +11,7 @@ import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   // fake auth variable (replace with real auth logic)
-  const isAuth = true; // change to true after login
+  const isAuth = false; // change to true after login
 
   return (
     <div>
