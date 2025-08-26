@@ -8,9 +8,9 @@ import Company from "./Company";
 import Channel from "./Channel";
 import Login from "./Login"; // create a login page
 import ProtectedRoute from "./ProtectedRoute";
+import MethodApi from "./MethodApi";
 
 function App() {
-  // fake auth variable (replace with real auth logic)
   const isAuth = false; // change to true after login
 
   return (
@@ -20,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/Service" element={<Service />} />
+          <Route path="/MethodApi" element={<MethodApi />} />
 
           <Route path="/Administartion/*" element={<ProtectedRoute isAuth={isAuth}><Administartion /></ProtectedRoute>}>
           <Route path="company" element={<Company />} />

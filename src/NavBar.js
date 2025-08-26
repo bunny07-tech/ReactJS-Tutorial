@@ -1,12 +1,40 @@
-import { Link,Outlet } from 'react-router-dom';
+import { Link, Outlet } from "react-router-dom";
 
 function NavBar() {
+  const linkStyle = {
+    textDecoration: "none",
+    color: "#fff",
+    padding: "10px 20px",
+    margin: "0 10px",
+    backgroundColor: "#007bff",
+    borderRadius: "5px",
+    fontWeight: "bold",
+  };
+
+  const navBarStyle = {
+    display: "flex",
+    alignItems: "center",
+    padding: "10px",
+    backgroundColor: "#333",
+  };
+
   return (
     <div>
-    <Link to="/home">Home</Link> <br />
-    <Link to="/service">Service</Link> <br />
-    <Link to="/Administartion">Administration</Link>< br />
-    <Link to="/User/age=12">Anil</Link>
+      <nav style={navBarStyle}>
+        <Link to="/home" style={linkStyle}>
+          Home
+        </Link>
+        <Link to="/service" style={linkStyle}>
+          Service
+        </Link>
+        <Link to="/Administartion" style={linkStyle}>
+          Administration
+        </Link>
+        <Link to="/MethodApi" style={linkStyle}>
+          API Call
+        </Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
