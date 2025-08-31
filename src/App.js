@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
-import Service from "./Service";
+import ReactRedux1 from "./ReactRedux1";
 import Administartion from "./Administartion";
 import NavBar from "./NavBar";
 import User from "./User";
@@ -9,6 +9,8 @@ import Channel from "./Channel";
 import Login from "./Login"; // create a login page
 import ProtectedRoute from "./ProtectedRoute";
 import MethodApi from "./MethodApi";
+import PostmanApi from "./PostmanApi";
+
 
 function App() {
   const isAuth = false; // change to true after login
@@ -19,8 +21,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/Service" element={<Service />} />
+          <Route path="/ReactRedux1" element={<ReactRedux1 />} />
           <Route path="/MethodApi" element={<MethodApi />} />
+          <Route path="/PostmanApi" element={<PostmanApi />} />
 
           <Route path="/Administartion/*" element={<ProtectedRoute isAuth={isAuth}><Administartion /></ProtectedRoute>}>
           <Route path="company" element={<Company />} />

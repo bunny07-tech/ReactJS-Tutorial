@@ -24,7 +24,7 @@ function NavBar() {
         <Link to="/home" style={linkStyle}>
           Home
         </Link>
-        <Link to="/service" style={linkStyle}>
+        <Link to="/ReactRedux1" style={linkStyle}>
           Service
         </Link>
         <Link to="/Administartion" style={linkStyle}>
@@ -32,6 +32,9 @@ function NavBar() {
         </Link>
         <Link to="/MethodApi" style={linkStyle}>
           API Call
+        </Link>
+        <Link to="/PostmanApi" style={linkStyle}>
+          Postman API
         </Link>
       </nav>
       <Outlet />
